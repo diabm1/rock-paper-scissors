@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    padding: 20px;
+    text-align: center;
+}
+#icons{
+    text-align: center;
+    padding-bottom: 20px;
+}
+#displayBox{
+    text-align: center;
+}
