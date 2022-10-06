@@ -9,7 +9,6 @@ let rockClicked = document.getElementById("rock");
 rockClicked.addEventListener("click", displayRock);
 rockClicked.addEventListener("click", getComputerChoice);
 
-
 let paperClicked = document.getElementById("paper");
 paperClicked.addEventListener("click", displayPaper);
 paperClicked.addEventListener("click", getComputerChoice);
@@ -19,8 +18,6 @@ let scissorsClicked = document.getElementById("scissors");
 scissorsClicked.addEventListener("click", displayScissors);
 scissorsClicked.addEventListener("click", getComputerChoice);
 scissorsClicked.addEventListener("click", decidesDraw);
-
-
 
 //User can select a rock, paper or scissors
 //if user clicks display either rock, paper, scissor
@@ -70,7 +67,9 @@ function decidesWinner() {
   // if(rockClicked && getComputerChoice == paper){
   //     console.log("you loose")
   // }
-  //how do I get computer choice? How Do I extract it from the getComputerChoice? is it my lack of knowledge of js that is making this difficult or just straight up my logic? if logic then shouldn't I use a program like flowgorithm to plan out my logic?
+
+
+  //how do I get computer choice? How Do I extract it from the getComputerChoice? 
 }
 
 function decidesLoser() {}
@@ -80,20 +79,22 @@ function decidesDraw() {
   const randomNum = Math.floor(Math.random() * 3);
   const compChoice = choices[randomNum];
 
-  if (compChoice == "rock" && displayRock) {
+  if (compChoice == "rock") {
     displayOutcome.innerHTML = `<h2>Draw!</h2>`;
     // rockClicked.addEventListener("click", decidesDraw);
-  } else if (compChoice == "paper" && displayPaper) {
-    displayOutcome.innerHTML = `<h2>Draw!</h2>`;
-  } else if (compChoice == "scissors" && displayScissors) {
-    displayOutcome.innerHTML = `<h2>Draw!</h2>`;
   }
+  
+  //   } else if (compChoice == "paper" && displayPaper) {
+  //     displayOutcome.innerHTML = `<h2>Draw!</h2>`;
+  //   } else if (compChoice == "scissors" && displayScissors) {
+  //     displayOutcome.innerHTML = `<h2>Draw!</h2>`;
+  //   }
 }
 
 //A score of total wins and losses will displayed at the bottom of the screen
 function keepScore() {
-  //how do I calculate user score
-  //how do I calculate computer score
+  //how do I calculate user score?
+  //how do I calculate computer score?
 }
 
 //The user can play as many times as they want
