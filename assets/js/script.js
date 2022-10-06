@@ -6,16 +6,19 @@ let displayBoxForComp = document.getElementById("displayBoxForComputer");
 let displayOutcome = document.getElementById("displayOutcome");
 
 let rockClicked = document.getElementById("rock");
-rockClicked.addEventListener("click", displayRock);
+let userChoice1 = rockClicked.addEventListener("click", displayRock);
+
 rockClicked.addEventListener("click", getComputerChoice);
 
 let paperClicked = document.getElementById("paper");
-paperClicked.addEventListener("click", displayPaper);
+let userChoice2 = paperClicked.addEventListener("click", displayPaper);
+
 paperClicked.addEventListener("click", getComputerChoice);
 paperClicked.addEventListener("click", decidesDraw);
 
 let scissorsClicked = document.getElementById("scissors");
-scissorsClicked.addEventListener("click", displayScissors);
+let userChoice3 = scissorsClicked.addEventListener("click", displayScissors);
+
 scissorsClicked.addEventListener("click", getComputerChoice);
 scissorsClicked.addEventListener("click", decidesDraw);
 
@@ -48,7 +51,9 @@ function getComputerChoice() {
   const randomNum = Math.floor(Math.random() * 3);
   const compChoice = choices[randomNum];
   // return choices[randomNum]
+
   console.log(compChoice);
+
   if (compChoice == "rock") {
     displayBoxForComp.innerHTML = `<h3>Computer has chosen rock</h3>`;
     // displayBoxForComp.innerHTML = `<h2>Draw!</h2>`;
@@ -60,10 +65,21 @@ function getComputerChoice() {
 }
 
 function decidesWinner() {
+  const choices = ["rock", "paper", "scissors"];
+  const randomNum = Math.floor(Math.random() * 3);
+  const compChoice = choices[randomNum];
   //how do I get computer choice? How Do I extract it from the getComputerChoice?
+  if (compChoice == "rock" && userChoice2) {
+    console.log(userChoice2);
+    displayOutcome.innerHTML = `<h2>Win!</h2>`;
+    // rockClicked.addEventListener("click", decidesDraw);
+  }
 }
 
 function decidesLoser() {
+  const choices = ["rock", "paper", "scissors"];
+  const randomNum = Math.floor(Math.random() * 3);
+  const compChoice = choices[randomNum];
   //if I chose rock and if computer choice equals paper
   //display rock covers paper, you loose
   // if(rockClicked && getComputerChoice == paper){
@@ -79,7 +95,7 @@ function decidesDraw() {
   //if user chooses rock and computer choice == rock
   //return draw
 
-  if (compChoice == "rock") {
+  if (compChoice == "rock" && userChoice1) {
     displayOutcome.innerHTML = `<h2>Draw!</h2>`;
     // rockClicked.addEventListener("click", decidesDraw);
   }
