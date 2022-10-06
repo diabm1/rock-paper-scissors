@@ -60,30 +60,30 @@ function getComputerChoice() {
 }
 
 function decidesWinner() {
-  //if user chooses rock and computer choice == rock
-  //return draw
+  //how do I get computer choice? How Do I extract it from the getComputerChoice?
+}
+
+function decidesLoser() {
   //if I chose rock and if computer choice equals paper
   //display rock covers paper, you loose
   // if(rockClicked && getComputerChoice == paper){
   //     console.log("you loose")
   // }
-
-
-  //how do I get computer choice? How Do I extract it from the getComputerChoice? 
 }
-
-function decidesLoser() {}
 
 function decidesDraw() {
   const choices = ["rock", "paper", "scissors"];
   const randomNum = Math.floor(Math.random() * 3);
   const compChoice = choices[randomNum];
 
+  //if user chooses rock and computer choice == rock
+  //return draw
+
   if (compChoice == "rock") {
     displayOutcome.innerHTML = `<h2>Draw!</h2>`;
     // rockClicked.addEventListener("click", decidesDraw);
   }
-  
+
   //   } else if (compChoice == "paper" && displayPaper) {
   //     displayOutcome.innerHTML = `<h2>Draw!</h2>`;
   //   } else if (compChoice == "scissors" && displayScissors) {
