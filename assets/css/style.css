@@ -1,23 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#header{
+
+#header {
     padding: 20px;
     text-align: center;
 }
-#icons{
+
+#icons {
     text-align: center;
     padding-bottom: 20px;
 }
-#displayBoxForUser{
+
+#displayBoxForUser {
     text-align: center;
 }
-#displayBoxForComputer{
+
+#displayBoxForComputer {
     padding-top: 20px;
     text-align: center;
 }
-#displayOutcome{
+
+#displayOutcome {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#score {
     padding-top: 20px;
     text-align: center;
 }
