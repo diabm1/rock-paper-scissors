@@ -24,7 +24,6 @@ scissorsClicked.addEventListener("click", playGame);
 //When a user selects rock, paper or scissors the screen will display:
 ////what the computer player has chosen
 ////whether they have won or lost that game
-
 function playGame() {
   const message = decidesWinnerLoserDraw();
   displayOutcome.innerHTML = `<h3>${message}</h3>`;
@@ -90,19 +89,14 @@ function decidesWinnerLoserDraw() {
 
 //A score of total wins and losses will displayed at the bottom of the screen
 function keepScore() {
-  //how do I calculate user score?
-  //how do I calculate computer score?
-  // userScore++;
-  
-    if(playerChoice === "paper" && computerChoice === "rock"){
-      userScore++
-    } else if(playerChoice === "rock" && computerChoice === "scissors"){
-      userScore++
-    } else if(playerChoice === "scissors" && computerChoice === "paper"){
-      userScore++
-    }
-  return score.innerHTML = `<h4>Score: ${userScore}</h4>`;
-  
+  if (playerChoice === "paper" && computerChoice === "rock") {
+    userScore++;
+  } else if (playerChoice === "rock" && computerChoice === "scissors") {
+    userScore++;
+  } else if (playerChoice === "scissors" && computerChoice === "paper") {
+    userScore++;
+  }
+  return (score.innerHTML = `<h4>Score: ${userScore}</h4>`);
 }
 
 //The user can play as many times as they want
